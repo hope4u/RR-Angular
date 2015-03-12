@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>RR 53</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="/js/eventsController.js"></script>
+  
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+
+
+  <!-- header -->
+  <header id="header">
+    <h1 id="title"><a href="/index.html">Royal Rangers 53</a> Zrüich Friesenberg</h1>
+    <nav id="main-nav">
+      <div class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/fotos">Fotos</a></li>
+        <li><a href="/about">Über Uns</a></li>
+      </ul>
+      </div>
+    </nav>
+  </header>
+  
+  
+  <section class="container box" ng-controller="eventsController">
+        <h5>Nächste Events {{json}}</h5>
+        <div class="row" ng-repeat="event in events">
+          <span><time datetime="{{event.start.toISOString()}}">{{event.startDatetime.short}}</time></span>
+          <span><a href="{{evnet.link}}">{{event.title}}</a></span>
+          <span>{{event.age}}</span>
+        </div>
+  </section>
+  
+  <!-- CTA -->
+  <section id="cta" class="accent-red">
+    <div class="container">
+      <header class="row">
+        <h2>Unser Halbjahres Prospekt</h2>
+        <p>Der Halbjahres Prospekt enthält alle wichtigen Informationen die du brauchts.</p>
+      </header>
+      <div class="row actions">
+        <a href="/prospekt" class="button button-special">Prospekt öffnen</a>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row copyright">
+        <span>&copy; Royal Rangers 53. All rights reserved.</span><span>Design: <a href="http://html5up.net">HTML5 UP</a></span>
+      </div>
+    </div>
+  </footer>
+  
+  
+</body>
+</html>

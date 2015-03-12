@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>RR 53</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="/js/events.js"></script>
+  
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+
+
+  <!-- header -->
+  <header id="header">
+    <h1 id="title"><a href="/index.html">Royal Rangers 53</a> Zrüich Friesenberg</h1>
+    <nav id="main-nav">
+      <div class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/fotos">Fotos</a></li>
+        <li><a href="/about">Über Uns</a></li>
+      </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- banner -->
+  <section id="banner">
+    <div class="container">
+      <header class="row">
+        <h2>Royal Rangers Friesenberg</h2>
+        <h5>Christliche Phadfinder der Pfingstmission Schweiz</h5>
+      </header>
+      <div class="row actions">
+        <a href="/events" class="button button-primary">Komm Auch</a>
+        <a href="/about" class="button button-special" style="color: dimgray">Wer sind wir</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- intro -->
+  <section  id="intro" class="container box">
+    <h4>Die Christliche Jugendarbeit<br> im Quartier Friesenberg</h4>
+    <p class="border-top">Dei Uns sind Kinder aller Alterstufen von 1. Kindergarten bis zur 9. Klasse willkommen.<br> Die Kinder werden jeden Samstag von 14:00 Uhr bis 17:00 Uhr altersgerecht betreut.</p>
+    <div class="image">
+      <img src="/imges/pic01.jpg" alt="image">
+    </div>
+  </section>
+  
+  <!-- features -->
+  <section id="features" class="container box">
+    <div class="row">
+      <section class="one-half column">
+        <span class="icon accent-red"><i class="fa fa-child fa-10x"></i></span>
+        <h5>Körperlich</h5>
+        <p>Für Kinder ist es wichtig ihren Körper kennen zu lernen. Wir fördern dies mit Spiel und Spass sowohl im Wald als auch rund um unser Treffpunkt. Sollte das Wetter einmal gar nicht mittspielen haben wir auch die Möglichkeit in der Trunhalle die überschüssige Energie los zu werden.</p>
+      </section>
+      <section class="one-half column border-left">
+        <span class="icon accent-green"><i class="fa fa-lightbulb-o"></i></span>
+        <h5>Geistig</h5>
+        <p>Das Geistige Wachstum eines Kindes hängt sehr strak von der jeweiligen beschäftigung ab. Als Royal Rangers ist es uns ein aliegen die Kinder nicht nur zu unterhalten sondern ihnen auch verschidene Fertigkeiten mit auf den Weg zu geben.</p>
+      </section>
+    </div>
+    <div class="row border-top">
+      <section class="one-half column">
+        <span class="icon accent-blue"><i class="fa fa-heartbeat"></i></span>
+        <h5>Geistlich</h5>
+        <p>Als Christliche Pfadfinder glauben wir, dass Gott im leben jedes Menschen einen grossen Stellenwert haben sollte. Wir bewegen uns in einer wunderbaren Natur, und möchten den Kindern ein verständniss für das Geschaffene vermitteln.</p>
+      </section>
+      <section class="one-half column border-left">
+        <span class="icon accent-yellow"><i class="fa fa-users"></i></span>
+        <h5>Gesellschaftlich</h5>
+        <p>Zusammen sind wir stark. Die Kinder werden in dem Alter entsprechenden Gruppen betreut. Die dadurch entstehenden Berürhungspunkte nutzen wir um den Kindern zu helfen sich mit anderen Menschen und Meinungen auseinander zu setzen.</p>
+      </section>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="row flex">
+      <section id="next-events" class="one-half column box" ng-controller="eventsController">
+        <h5>Nächste Events</h5>
+        <div class="row" ng-repeat="event in events">
+          <span><time datetime="{{event.start.toISOString()}}">{{event.startDatetime.short}}</time></span>
+          <span><a href="{{evnet.link}}">{{event.title}}</a></span>
+          <span>{{event.age}}</span>
+        </div>
+      </section>
+      <section id="current-albums" class="one-half column box">
+        <h5>This is a title</h5>
+        <p>Die fotos unererer Events sind Hier einsehbar und sollten ein bisschen inpressionen über unsere Aktivitäten geben. Sicher ist nicht alles documentiert.</p>
+        <a href="">Tis is a huge link just to be able to see how much hase</a>
+      </section>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section id="cta" class="accent-red">
+    <div class="container">
+      <header class="row">
+        <h2>Unser Halbjahres Prospekt</h2>
+        <p>Der Halbjahres Prospekt enthält alle wichtigen Informationen die du brauchts.</p>
+      </header>
+      <div class="row actions">
+        <a href="/prospekt" class="button button-special">Prospekt öffnen</a>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row copyright">
+        <span>&copy; Royal Rangers 53. All rights reserved.</span><span>Design: <a href="http://html5up.net">HTML5 UP</a></span>
+      </div>
+    </div>
+  </footer>
+  
+  
+</body>
+</html>

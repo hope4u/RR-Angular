@@ -1,0 +1,137 @@
+body {
+  color: dimgray;
+  background-color: lightgray;
+  text-align: center;
+  padding-bottom: 5rem; /* development */
+}
+body p {
+  font-weight: 300;
+  font-size: 12px;
+  text-align: right;
+}
+header {
+  display: none;
+  position: absolute;
+}
+.navbar {
+  float: right;
+  padding: 0;
+}
+.navbar ul li{
+  float: left;
+  list-style: none;
+  padding: 0 2rem;
+  margin: 0;
+}
+
+section#banner {
+  background-image: url('/imges/banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 5rem 0 5rem 0;
+  color: white;
+}
+.border-top {
+  border-top: 1px solid lightgray;
+  padding-top: 1em;
+}
+.container {
+  padding: 1rem;
+}
+.box {
+  background-color: white;
+  margin-top: 1rem;
+  box-shadow: 0 2px 2px gray; 
+}
+.box.intro {
+  margin-top: 0;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+.box.intro p {
+  font-weight: 400;
+  display: inline-block;
+}
+.box.intro .image {
+  margin: 0 0 -1rem -1rem;
+  padding: 0 0 0 0;
+  width: calc(100% + 2rem);
+
+}
+.box.intro .image img {
+  width: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+/* Larger than mobile */
+@media (min-width: 400px) {
+  .container  {
+    width: 95%;
+    max-width: 1040px;
+  }
+  .box {
+    border-radius: 8px;
+  }
+  .box.intro {
+    margin-top: 1rem;
+  }
+}
+/* Larger than phablet */
+@media (min-width: 550px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .container {
+    width: 85%;
+  }
+  header {
+    display: block;
+    clear: both;
+    height: 5rem;
+    line-height: 5rem;
+    background-color: rgba(0,0,0,.6);
+    padding: 1rem 0rem 0.5rem 2rem;
+  }
+  header a{
+    text-decoration: none;
+    color: lightgray;
+  }
+  #title {
+    float: left;
+    font-size: 2.4rem;
+    line-height: 5rem;
+    color: gray;
+  }
+  #title a {
+    font-weight: 400;
+  }
+  .navbar {
+    float: right;
+    padding: 0;
+  }
+  .navbar ul li{
+    float: left;
+    list-style: none;
+    padding: 0 2rem;
+    margin: 0;
+  }
+
+  section#banner {
+    padding: 20rem 0 30rem 0;
+    color: white;
+  }
+
+  .box.intro {
+    margin-top: -20rem;
+    padding-top: 6rem;
+    padding-bottom: 4rem
+  }
+  .box.intro .image {
+    margin: 0 0 -4rem -1rem;
+  }
+}
